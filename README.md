@@ -1,15 +1,51 @@
 # AUTOHELPER
 Projeto: Calculadora de Consumo e Manutenção Automotiva
 
-Este projeto é uma aplicação em Python que ajuda motoristas a calcularem o consumo médio de combustível (km/L), estimarem a vida útil dos pneus e preverem a necessidade de troca de óleo do veículo.
-O objetivo é oferecer uma ferramenta prática e didática, desenvolvida como parte da minha evolução em programação, unindo minha paixão pela área automobilística à construção de soluções reais.
+# Boas vindas
+print("=== AUTOHELPER - Gerenciador de Consumo e Manutenção ===")
 
-Principais conceitos aplicados:
+# Loop principal 
+while True:
+    print("\nEscolha uma opção:")
+    print("1. Calcular consumo de combustível")
+    print("2. Estimar custo da viagem")
+    print("3. Verificar revisões necessárias")
+    print("4. Sair")
 
-Entrada e validação de dados do usuário
+    # Receber a escolha do usuáro
+    opcao = input("Digite o número da opção desejada: ")
 
-Operações matemáticas básicas
+    # Verificar a escolha do usuário
 
-Condicionais (if/else)
+    if opcao == "1":
 
-Formatação de saída com f-strings
+        # Cálculo do consumo de combustível
+
+        print("Você escolheu calcular o consumo de combustível.")
+
+        quilometros_rodados = float(input("Quantos quilômetros você percorreu?"))
+        litros_usados = float(input("Quantos litros de combustível você usou?"))
+
+        if litros_usados == 0:
+            print("ERRO: você não pode dividir por zero! Informe um valor válido.")
+        else: 
+             consumo = quilometros_rodados / litros_usados
+
+        print(f"Seu consumo médio foi de {consumo:.2f} km\l")
+       
+        pass
+
+    elif opcao == "2":
+        # Custo de viagem
+        pass
+
+    elif opcao == "3":
+        # Verificação de revisões
+        pass
+
+    elif opcao == "4":
+        print("Obrigado por usar o AutoHelper! Até a próxima!")
+        break
+
+    else:
+        print("Opção inválida! Tente novamente.")
